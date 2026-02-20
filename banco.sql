@@ -1,0 +1,81 @@
+/*CREATE DATABASE ESCOLA;information_schema */
+
+/*CREATE TABLE ALUNOS(
+	ID INT PRIMARY KEY AUTO_INCREMENT,
+	NOME VARCHAR(120) NOT NULL	
+);*/
+
+/*SELECT ID, NOME FROM alunos LIMIT 10;
+/*
+INSERT INTO ALUNOS (NOME)
+VALUES ('TITO'),('THIER'),('JANSEN');*/
+
+/*SELECT ID, NOME FROM alunos ORDER BY NOME DESC;
+*/
+/*SELECT COUNT(*) AS TOTAL_ALUNOS FROM alunos;
+*/
+/*
+SELECT * FROM alunos WHERE NOME LIKE "J%";
+*/
+/*
+SELECT * FROM alunos WHERE NOME LIKE "%E%";
+*/
+/*
+SELECT NOME FROM alunos;
+*/
+/*
+SELECT NOME, COUNT(*) AS TOTAL FROM alunos
+GROUP BY NOME
+ORDER BY TOTAL DESC
+*/
+/*
+CREATE TABLE CURSOS(
+	ID INT AUTO_INCREMENT PRIMARY KEY,
+	NOME_CURSO VARCHAR(120) NOT NULL
+);
+*/
+/*
+CREATE TABLE MATRICULAS(
+	ID INT AUTO_INCREMENT PRIMARY KEY,
+	ALUNO_ID INT,
+	CURSO_ID INT,
+	
+	FOREIGN KEY (ALUNO_ID) REFERENCES alunos(id),
+	FOREIGN KEY (CURSO_ID) REFERENCES cursos(id)
+);
+*/
+/*
+INSERT INTO cursos (NOME_CURSO) VALUES
+('Informática'),
+('Administração'),
+('Mecânica'),
+('Eletrotécnica')
+*/
+
+
+/*
+INSERT INTO matriculas (ALUNO_ID, CURSO_ID) VALUES
+(1,1),
+(2,1),
+(3,2),
+(1,2);
+*/
+/*
+SELECT 
+	alunos.NOME AS aluno,
+	cursos.NOME_CURSO AS curso 
+
+FROM matriculas
+INNER JOIN alunos ON matriculas.ALUNO_ID = alunos.ID
+INNER JOIN cursos ON matriculas.CURSO_ID = cursos.ID
+*/
+
+SELECT * FROM alunos;
+
+DELETE FROM alunos WHERE ID = 4;
+*/
+
+INSERT INTO ALUNOS (NOME)
+VALUES ('Gabiru'),('Pedronha'),('Ganso');
+
+SELECT * FROM alunos 
